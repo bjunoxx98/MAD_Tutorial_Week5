@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void openActivity3(){
-        Intent intent = new Intent(this, activity_gridlayout.class);
+        Intent intent = new Intent(this, gridlayoutv2.class);
         startActivity(intent);
     }
 }

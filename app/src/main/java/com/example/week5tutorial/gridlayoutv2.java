@@ -7,11 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
 
-public class activity_gridlayout extends AppCompatActivity {
+public class gridlayoutv2 extends AppCompatActivity {
 
-    Button buttonhome,btn0,btn1,btn2,btn3,btn4,btn5,btn6,btn7,btn8,btn9,btnPercent,btnPlus,btnMinus,btnMultiply,btnDivision,btnEqual,buttonC;
+    Button bhome,b0,b1,b2,b3,b4,b5,b6,b7,b8,b9,bsum,bmin,bmul,bdiv,beql,btnc;
     EditText ET,ET2;
 
     float mValueOne, mValueTwo;
@@ -21,11 +20,11 @@ public class activity_gridlayout extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gridlayout);
+        setContentView(R.layout.activity_gridlayoutv2);
 
         //button for moving to MAIN activity
-        buttonhome = (Button) findViewById(R.id.buttonhome_grid);
-        buttonhome.setOnClickListener(new View.OnClickListener(){
+        bhome = (Button) findViewById(R.id.bhome);
+        bhome.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v){
                 openMainActivity();
@@ -33,100 +32,100 @@ public class activity_gridlayout extends AppCompatActivity {
         });
 
         //ASSIGN VARIABLES
-        btn0 = findViewById(R.id.btn0);
-        btn1 = findViewById(R.id.btn1);
-        btn2 = findViewById(R.id.btn2);
-        btn3 = findViewById(R.id.btn3);
-        btn4 = findViewById(R.id.btn4);
-        btn5 = findViewById(R.id.btn5);
-        btn6 = findViewById(R.id.btn6);
-        btn7 = findViewById(R.id.btn7);
-        btn8 = findViewById(R.id.btn8);
-        btn9 = findViewById(R.id.btn9);
+        b0 = findViewById(R.id.b0);
+        b1 = findViewById(R.id.b1);
+        b2 = findViewById(R.id.b2);
+        b3 = findViewById(R.id.b3);
+        b4 = findViewById(R.id.b4);
+        b5 = findViewById(R.id.b5);
+        b6 = findViewById(R.id.b6);
+        b7 = findViewById(R.id.b7);
+        b8 = findViewById(R.id.b8);
+        b9 = findViewById(R.id.b9);
 
-        btnPlus = findViewById(R.id.btnPlus);
-        btnMinus = findViewById(R.id.btnMinus);
-        btnDivision = findViewById(R.id.btnDivision);
-        btnMultiply = findViewById(R.id.btnMultiply);
-        btnEqual = findViewById(R.id.btnEqual);
-        buttonC = (Button) findViewById(R.id.buttonC);
+        bsum = findViewById(R.id.bsum);
+        bmin = findViewById(R.id.bmin);
+        bmul = findViewById(R.id.bmul);
+        bdiv = findViewById(R.id.bdiv);
+        beql = findViewById(R.id.beql);
+        btnc = (Button) findViewById(R.id.btnc);
 
         ET = (EditText) findViewById(R.id.ET);
         ET2 = (EditText) findViewById(R.id.ET2);
 
         //LISTENER NUM BUTTON ONCLICK FUNCTION
-        btn0.setOnClickListener(new View.OnClickListener() {
+        b0.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ET.setText(ET.getText() + "0");
             }
         });
 
-        btn1.setOnClickListener(new View.OnClickListener() {
+        b1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ET.setText(ET.getText() + "1");
             }
         });
 
-        btn2.setOnClickListener(new View.OnClickListener() {
+        b2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ET.setText(ET.getText() + "2");
             }
         });
 
-        btn3.setOnClickListener(new View.OnClickListener() {
+        b3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ET.setText(ET.getText() + "3");
             }
         });
 
-        btn4.setOnClickListener(new View.OnClickListener() {
+        b4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ET.setText(ET.getText() + "4");
             }
         });
 
-        btn5.setOnClickListener(new View.OnClickListener() {
+        b5.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ET.setText(ET.getText() + "5");
             }
         });
 
-        btn6.setOnClickListener(new View.OnClickListener() {
+        b6.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ET.setText(ET.getText() + "6");
             }
         });
 
-        btn7.setOnClickListener(new View.OnClickListener() {
+        b7.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ET.setText(ET.getText() + "7");
             }
         });
 
-        btn8.setOnClickListener(new View.OnClickListener() {
+        b8.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ET.setText(ET.getText() + "8");
             }
         });
 
-        btn9.setOnClickListener(new View.OnClickListener() {
+        b9.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ET.setText(ET.getText() + "9");
             }
         });
 
-            //BUTTON FOR CALCULATION
-        btnPlus.setOnClickListener(new View.OnClickListener() {
+        //BUTTON FOR CALCULATION
+        bsum.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
 
@@ -143,7 +142,7 @@ public class activity_gridlayout extends AppCompatActivity {
             }
         });
 
-        btnMinus.setOnClickListener(new View.OnClickListener() {
+        bmin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mValueOne = Float.parseFloat(ET.getText() + "");
@@ -153,7 +152,7 @@ public class activity_gridlayout extends AppCompatActivity {
             }
         });
 
-        btnMultiply.setOnClickListener(new View.OnClickListener() {
+        bmul.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mValueOne = Float.parseFloat(ET.getText() + "");
@@ -163,7 +162,7 @@ public class activity_gridlayout extends AppCompatActivity {
             }
         });
 
-        btnDivision.setOnClickListener(new View.OnClickListener() {
+        bdiv.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mValueOne = Float.parseFloat(ET.getText() + "");
@@ -173,7 +172,7 @@ public class activity_gridlayout extends AppCompatActivity {
             }
         });
 
-        btnEqual.setOnClickListener(new View.OnClickListener() {
+        beql.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 mValueTwo = Float.parseFloat(ET.getText() + "");
@@ -204,7 +203,7 @@ public class activity_gridlayout extends AppCompatActivity {
             }
         });
 
-        buttonC.setOnClickListener(new View.OnClickListener() {
+        btnc.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 ET.setText("");
